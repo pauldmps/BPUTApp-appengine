@@ -1,0 +1,12 @@
+application: paul-shantanu-bputapp
+version: 1
+runtime: php
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /default.php
+  script: default.php
+
+- url : /notice.php
+  script : notice.php
