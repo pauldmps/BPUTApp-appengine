@@ -1,6 +1,6 @@
 application: paul-shantanu-bputapp
 version: 1
-runtime: php
+runtime: php55
 api_version: 1
 threadsafe: true
 
@@ -10,3 +10,16 @@ handlers:
 
 - url : /notice.php
   script : notice.php
+
+- url : /json.php
+  script : json.php
+
+- url : /exam_schedule.php
+  script : exam_schedule.php
+
+- url : /options.php
+  script : options.php
+
+- url : /test.html
+  static_files : test.html
+  upload : test.html

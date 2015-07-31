@@ -7,10 +7,12 @@ $url= $_POST['url'];
 
 $all=phpQuery::newDocumentFileHTML($url, $charset = 'utf-8');
 
+$tags = preg_grep("/style([0-9 -()+]+$)/", explode("\n", $all['td']));
+
 $texts=$all['p'];
 $popuptext=$all['td.jeetext'];
 $table_head=$all['td.style17'];
-$table_body=$all['td.style4'];
+$table_body=$all['td.style9'];
 
 echo '<bput>';
 
@@ -44,13 +46,13 @@ foreach ($popuptext as $text) {
  }
 
 foreach($table_body as $td) {
-	
+
 	echo '<td>';
 	echo '<![CDATA[';
 	echo pq($td)->text();
 	echo ']]>';
 	echo '</td>';
- }  
+ }
  echo '</bput>';
 
 ?>

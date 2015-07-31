@@ -3,7 +3,7 @@ header('Content-type: application/json');
 
 require('phpQuery-onefile.php');
  
-$all=phpQuery::newDocumentFileHTML('BPUT.htm', $charset = 'utf-8');
+$all=phpQuery::newDocumentFileHTML('http://www.bput.ac.in/', $charset = 'utf-8');
  
 $links = $all['a.myblue'];
 
