@@ -17,9 +17,19 @@ handlers:
 - url : /exam_schedule.php
   script : exam_schedule.php
 
-- url : /options.php
-  script : options.php
+- url : /semester_options.php
+  script : semester_options.php
+
+- url : /branch_options.php
+  script : branch_options.php
 
 - url : /test.html
   static_files : test.html
   upload : test.html
+
+- url : /example.php
+  script : example.php
+
+- url : /test_form.html
+  static_files : test_form.html
+  upload : test_form.html
